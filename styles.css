@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+/*Define as cores do projeto*/
 :root{
-    --main-color: #ffee00; /* Define a cor principal do projeto */
+    --main-color: #ffee00;
     --second-color: rgb(3, 158, 3);
     --gradient-color-bg:linear-gradient(180deg,
     rgb(20, 235, 0)15%,
     rgb(236, 221, 0)55%,
     rgb(0, 179, 24)95%);
 }
+
+/* Adiciona estilo em toda pagina*/
 * {
     padding: 0;
     margin: 0;
@@ -15,9 +19,10 @@
     box-sizing: border-box;
 }
 
+/* --------------------------home--------------------------------*/
 
 .background {
-    background-image: url(img/background-preto.png);
+    background-image: url(img/background-home.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -25,7 +30,7 @@
 
 }
 
-nav {
+nav /*barra de navegação*/{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,8 +68,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:var(--second-color);
-    transform: .4s;
+    background-image:var(--gradient-color-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    transition: transform .4s;
 }
 
 .btn {
@@ -77,11 +86,13 @@ nav ul li a:hover {
     border-radius: 30px;
     transition: transform .4s;
 }
-
 .btn:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
     transform: scale(1.2);
 }
 
+/* -------conteúdo da home------*/
 .Main {
     position: absolute;
     top: 50%;
@@ -119,7 +130,7 @@ h3 {
 }
 
 
-/*sobre*/
+/*-----------------------------sobre------------------------------*/
 
 .background-sobre {
     background-image: url(img/background-sobre.png);
@@ -138,6 +149,7 @@ h3 {
     width: 550px;
 }
 
+/*------conteúdo "sobre" -----*/
 .main-sobre {
     display: flex;
     align-items: center;
@@ -169,7 +181,7 @@ h3 {
 }
 
 button {
-    background-color: var(--main-color);
+    background-color: var(--gradient-color-bg);
     color: var(--second-color);
     text-transform: none;
     border: 2px solid transparent;
@@ -182,6 +194,68 @@ button {
 
 button:hover {
     background-color: transparent;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--gradient-color-bg);
     cursor: pointer;
+}
+
+/*--------------------------------------Contato ----------------------------------------*/
+.background-contact {
+    background-image: url(img/background-contact.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1130px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+/* -----------------formulário------------*/
+
+.main-contact .row form{
+    flex: 1 1 40rem;
+    margin-left: 4rem;
+    margin-right: 250px;
+    max-width: 800px;
+    padding: 2rem 2.5rem;
+    border: 0.3rem solid var(--second-color);
+    background: transparent;
+    border-radius: .5rem;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+.main-contact .row form .box{
+    padding:0.5rem;
+    font-size: 1rem;
+    color:#000;
+    text-transform: none;
+    border:.1rem solid var(--second-color);
+    border-radius: .5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.main-contact .row form textarea{
+    /*Campo do "Digite sua mensagem"*/
+    height:15rem;
+    resize:none;   
+}
+.main-contact{
+    display: flex;
+}
+.main-contact{
+    /*Container de contato*/
+    position: relative;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-contact .text-contact{
+    margin-left: 200px;
 }
