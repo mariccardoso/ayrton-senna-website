@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main-color: #ffee00; /* Define a cor principal do projeto */
+    --second-color: rgb(3, 158, 3);
+    --gradient-color-bg:linear-gradient(180deg,
+    rgb(20, 235, 0)15%,
+    rgb(236, 221, 0)55%,
+    rgb(0, 179, 24)95%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.background {
+    background-image: url(img/background-preto.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+span {
+    background-image:var(--gradient-color-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color:var(--second-color);
+    transform: .4s;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.Main {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.Main span {
+    background-image:var(--gradient-color-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+h1 {
+    color: #fff;
+    margin: 0px 0px 50px;
+    font-size: 100px;
+    
+}
+
+p {
+    color: rgba(249, 255, 197, 0.8);
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 60px ;
+}
+
+h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+
+/*sobre*/
+
+.background-sobre {
+    background-image: url(img/background-sobre.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.background-sobre img {
+    width: 430px;
+    height: auto;
+}
+
+.Text-sobre {
+    width: 550px;
+}
+
+.main-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1130px;
+    margin: 0 auto;
+    margin-top: 150px
+}
+
+.Text-sobre h2 {
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.Text-sobre h5 {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.Text-sobre p {
+    color: rgba(251, 252, 212, 0.8);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    text-transform: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 20px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
